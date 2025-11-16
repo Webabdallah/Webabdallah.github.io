@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient( white 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+        
+        .header {
+            background-color: #3498db;
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .name {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .left-content {
+            flex: 3;
+        }
+        
+        .title {
+            font-size: 1.8rem;
+            color: black;
+            margin-bottom: 20px;
+        }
+        
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        .btn {
+            display: flex;
+            justify-content: center;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 10px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .right-content {
+            flex: 1;
+            text-align: right;
+        }
+        
+        img {
+            width : 500px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="name">ATAMAO Abdala</h1>
+        <nav class="nav-links">
+            <a href="">Accueil</a>
+            <a href="1àpropos.html">À propos</a>
+            <a href="2projets.html">Projet</a>
+            <a href="3compétences.html">Compétence</a>
+            <a href="4contact.html">contact</a>
+        </nav>
+    </header>
+    
+    <main class="main-content">
+        <div class="left-content">
+            <h2 class="title">Je suis ATAMAO Abdala  ,  Développeur en devenir  <br /><br />  passionné par le web et le design</h2>
+            <p class="description"></p>
+            <a href="2projets.html" class="btn">Voir mes projets</a>
+        </div>
+        
+        <div class="right-content">
+            <img src="ima.jpg" alt="image de développeur" />  
+        </div>
+    </main>
+</body>
+</html>

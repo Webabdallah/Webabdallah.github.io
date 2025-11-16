@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Compétences</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+        }
+        
+        .skills-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .skills-column {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .skills-column:hover {
+            transform: translateY(-5px);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #764ba2;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 10px;
+        }
+        
+        .skills-list {
+            list-style-type: none;
+        }
+        
+        .skill-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #f5f5f5;
+            transition: background-color 0.2s;
+        }
+        
+        .skill-item:hover {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .skill-item:last-child {
+            border-bottom: none;
+        }
+        
+        .skill-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .skill-icon {
+            width: 40px;
+            height: 40px;
+            background: #764ba2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-item:hover .skill-icon {
+            transform: scale(1.1);
+        }
+        
+        .skill-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            flex-grow: 1;
+        }
+        
+        .skill-percentage {
+            font-weight: bold;
+            color: #764ba2;
+            background: rgba(118, 75, 162, 0.1);
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #764ba2, #667eea);
+            transition: width 1.5s ease-in-out;
+            width: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .skills-container {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: white;
+            color: #764ba2;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: #764ba2;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Mes Compétences</h1>
+            <p class="subtitle">Un aperçu de mes compétences techniques et personnelles</p>
+        </div>
+        
+        <div class="skills-container">
+            <div class="skills-column">
+                <h2><i class="fas fa-user-check"></i> Soft Skills</h2>
+                <ul class="skills-list">
+                    <li class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <span class="skill-name">Gestion de projet</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="85"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <span class="skill-name">Résolution de problème</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="90"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <span class="skill-name">Adaptabilité</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="95"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="skills-column">
+                <h2><i class="fas fa-laptop-code"></i> Hard Skills</h2>
+                <ul class="skills-list">
+                    <li class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="95"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="90"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="80"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span class="skill-name">VS Code</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="85"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="0acceuil.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Retour à l'accueil
+            </a>
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress');
+            
+            function animateBars() {
+                progressBars.forEach(bar => {
+                    const width = bar.getAttribute('data-width') + '%';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 200);
+                });
+            }
+            
+            setTimeout(animateBars, 300);
+            
+            const percentages = document.querySelectorAll('.skill-percentage');
+            percentages.forEach(perc => {
+                const target = parseInt(perc.textContent);
+                let current = 0;
+                const increment = target / 20;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    perc.textContent = Math.round(current) + '%';
+                }, 50);
+            });
+        });
+    </script>
+</body>
+</html>
